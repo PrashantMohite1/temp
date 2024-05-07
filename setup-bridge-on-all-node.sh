@@ -37,12 +37,10 @@
 
 # sudo chown $USER:docker /usr/local/bin/docker-compose
 
-# Configure containerd to start using systemd as cgroup:
+# ################ Configure containerd to start using systemd as cgroup:
 
 containerd config default | sudo tee /etc/containerd/config.toml >/dev/null 2>&1
 sudo sed -i 's/SystemdCgroup \= false/SystemdCgroup \= true/g' /etc/containerd/config.toml
-Restart and enable the containerd service:
-
 sudo systemctl restart containerd
 sudo systemctl enable containerd
 
