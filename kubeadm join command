@@ -1,0 +1,4 @@
+
+######below command used to print kubeadm join command if you forgotten copy command from terminal
+#kubeadm token create --print-join-command
+kubeadm join 10.0.2.15:6443 --token m96mdq.ked8zsv9iju6cs95 --discovery-token-ca-cert-hash sha256:6cff7205054d5fc4b09eac45abba1d45f3f4a4bfb8ed82c6d953d3d2c9b84d05
