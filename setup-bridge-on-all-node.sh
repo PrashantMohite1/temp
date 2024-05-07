@@ -1,17 +1,17 @@
 
 # disable swap
-sudo swapoff -a
-sudo sed -i '/ swap / s/^\(.*\)$/#\1/g' /etc/fstab
+# sudo swapoff -a
+# sudo sed -i '/ swap / s/^\(.*\)$/#\1/g' /etc/fstab
 
 # create bridge network for k8s
 
-cat <<EOF | sudo tee /etc/modules-load.d/k8s.conf
-overlay
-br_netfilter
-EOF
+# cat <<EOF | sudo tee /etc/modules-load.d/k8s.conf
+# overlay
+# br_netfilter
+# EOF
 
-sudo modprobe overlay
-sudo modprobe br_netfilter
+# sudo modprobe overlay
+# sudo modprobe br_netfilter
 
 # sysctl params required by setup, params persist across reboots
 cat <<EOF | sudo tee /etc/sysctl.d/k8s.conf
