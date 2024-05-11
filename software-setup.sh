@@ -49,7 +49,7 @@ sudo chown $USER:docker /usr/local/bin/docker-compose
 
 
 
-# Inatall JDK 
-sudo apt-get install -y openjdk-8-jdk
-echo "JDK installed successfully.."  >> /home/$USERNAME/host.log 
+# # Inatall JDK 
+# sudo apt-get install -y openjdk-8-jdk
+# echo "JDK installed successfully.."  >> /home/$USERNAME/host.log 
 
